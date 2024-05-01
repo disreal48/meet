@@ -65,6 +65,13 @@ Given the user is viewing a list of upcoming events with event details displayed
 When the user clicks on the same event again;
 Then the event details should be hidden.
 
+### Scenario 3
+
+Given the user is viewing a list of upcoming events with event details displayed;
+When the user clicks on another event;
+The currently shown event detail should be hidden;
+And the clicked event details should be displayed.
+
 ## Feature 3: Specify Number of Events
 
 As a user, I want to be able to specify the number of events to be displayed so that I can control the amount of information shown at once.
