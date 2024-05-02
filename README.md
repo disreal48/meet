@@ -116,7 +116,7 @@ Then the interactive charts should be displayed.
 
 To get started with MeetApp, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/MeetApp.git`
+1. Clone the repository: `git clone https://github.com/your-username/meet.git`
 2. Install the dependencies: `npm install`
 3. Configure the app: Update the necessary settings in `config.js`
 4. Start the app: `npm start`
