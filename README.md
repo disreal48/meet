@@ -55,22 +55,21 @@ As a user, I want to be able to show or hide event details so that I can choose 
 
 ### Scenario 1
 
+Given the main page is open;
+When the user sees the list of all upcoming events;
+Then the user should see that each event element is collapsed by default;
+
+### Scenario 2
+
 Given the user is viewing a list of upcoming events;
 When the user clicks on an event;
 Then the event details should be displayed.
 
-### Scenario 2
+### Scenario 3
 
 Given the user is viewing a list of upcoming events with event details displayed;
 When the user clicks on the same event again;
 Then the event details should be hidden.
-
-### Scenario 3
-
-Given the user is viewing a list of upcoming events with event details displayed;
-When the user clicks on another event;
-The currently shown event detail should be hidden;
-And the clicked event details should be displayed.
 
 ## Feature 3: Specify Number of Events
 
