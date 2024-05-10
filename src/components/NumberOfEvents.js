@@ -1,10 +1,19 @@
 import React from "react";
 
-function NumberOfEvents({ setCurrentNOE }) {
+function NumberOfEvents({ setCurrentNOE, setErrorAlert }) {
   const handleInputChanged = (event) => {
     const value = event.target.value;
 
-    setCurrentNOE(value);
+    let infoText;
+    if (value <= 0 || isNaN(value)) {
+      infoText =
+        "Please enter a positive number greater than 0. Otherwise, the default number of events will be displayed.";
+      setCurrentNOE(32);
+    } else {
+      infoText = "";
+      setCurrentNOE(value);
+    }
+    setErrorAlert(infoText);
   };
 
   return (
