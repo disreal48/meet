@@ -11,16 +11,6 @@ MeetApp is a serverless Progressive Web App that allows you to find events in a 
 - Customizable number of displayed events
 - Interactive charts for event information
 
-## Serverless Functions
-
-In MeetApp, we utilize serverless functions to handle our backend operations. This allows us to run our backend code without having to manage a server ourselves.
-
-Serverless functions are event-driven, meaning they run in response to triggered events. In our case, these events could be a user searching for events in a city or a user adding an event to their calendar.
-
-Our serverless functions are hosted on a cloud platform, which automatically manages the infrastructure required to execute the code. This means we can focus on writing the code for our application's functionality, without worrying about server management, scaling, or provisioning.
-
-In summary, serverless functions provide us with a flexible, scalable, and cost-effective way to run our backend operations.
-
 ## Feature 1: Filter Events By City
 
 As a user, I should be able to filter events by city so that I can see a list of events taking place in that city.
