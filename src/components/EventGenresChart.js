@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import { Tooltip } from "recharts";
 
 const EventGenresChart = ({ events }) => {
   const [data, setData] = useState([]);
@@ -8,7 +9,14 @@ const EventGenresChart = ({ events }) => {
     setData(getData());
   }, [`${events}`]);
 
-  const genres = ["React", "JavaScript", "Node", "jQuery", "AngularJS"];
+  const genres = [
+    "React",
+    "JavaScript",
+    "Node",
+    "jQuery",
+    "AngularJS",
+    "AngularJS-Remote",
+  ];
 
   const getData = () => {
     const data = genres.map((genre) => {
@@ -45,6 +53,18 @@ const EventGenresChart = ({ events }) => {
     ) : null;
   };
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${payload[0].payload.name} : ${payload[0].value}%`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <ResponsiveContainer width="99%" height={400}>
       <PieChart>
@@ -53,9 +73,9 @@ const EventGenresChart = ({ events }) => {
           dataKey="value"
           fill="#8884d8"
           labelLine={false}
-          label={renderCustomizedLabel}
           outerRadius={130}
         />
+        <Tooltip content={<CustomTooltip />} />
       </PieChart>
     </ResponsiveContainer>
   );
